@@ -1,26 +1,56 @@
 import '@/App.css'
 import GlobalStyles from '@/styles/GlobalStyle'
-import { css } from '@emotion/react'
-import Colors from '@/styles/Colors'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import Login from '@/pages/Login'
+import AddPlaylist from '@/pages/AddPlaylist'
+import Bookmark from '@/pages/Bookmark'
+import MyPlaylist from '@/pages/MyPlaylist'
+import Networking from '@/pages/Networking'
+import Profile from '@/pages/Profile'
+import SignUp from '@/pages/SignUp'
+import Header from '@/components/theHeader/Header'
+import Navigation from './components/theNavigation/Navigation'
 
 function App() {
   return (
     <>
       <GlobalStyles />
-      <div css={container}>
-        <div css={preview}>북마크</div>
-      </div>
+      <BrowserRouter>
+        <Header />
+        <Navigation />
+        <Routes>
+          <Route
+            path="/login"
+            element={<Login />}
+          />
+          <Route
+            path="/signup"
+            element={<SignUp />}
+          />
+          <Route
+            path="/addplaylist"
+            element={<AddPlaylist />}
+          />
+          <Route
+            path="/bookmark"
+            element={<Bookmark />}
+          />
+          <Route
+            path="/myplaylist"
+            element={<MyPlaylist />}
+          />
+          <Route
+            path="/networking"
+            element={<Networking />}
+          />
+          <Route
+            path="/profile"
+            element={<Profile />}
+          />
+        </Routes>
+      </BrowserRouter>
     </>
   )
 }
-const container = css`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 72px;
-  background-color: ${Colors.white};
-`
-const preview = css`
-  color: ${Colors.black};
-`
+
 export default App
