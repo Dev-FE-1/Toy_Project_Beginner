@@ -13,7 +13,7 @@ const Navigation = () => {
   return (
     <>
       <div css={navbar}>
-        <Link to="/networking">
+        <Link to="/Home">
           <CgHome css={icon} />
         </Link>
         <Link to="/myplaylist">
