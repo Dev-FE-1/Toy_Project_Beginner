@@ -1,12 +1,10 @@
 {
   "compilerOptions": {
-    "jsx": "react-jsx",
     "baseUrl": "./",
     "paths": {
       "@/*": ["./src/*"],
       "node_modules/*": ["./node_modules/*"]
-    },
-    "jsxImportSource": "@emotion/react"
+    }
   },
   "files": [],
   "references": [
