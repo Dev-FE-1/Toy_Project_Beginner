@@ -1,4 +1,5 @@
 import { css } from '@emotion/react'
+import Colors from '@/styles/Colors'
 
 const Header = () => {
   return (
@@ -17,10 +18,12 @@ const header = css`
   top: 0;
   left: 0;
   z-index: 100;
+  color: ${Colors.white};
 `
 
 const title = css`
   font-size: 20px;
+  color: ${Colors.black};
 `
 
 export default Header
