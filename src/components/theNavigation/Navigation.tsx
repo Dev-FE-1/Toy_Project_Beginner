@@ -7,27 +7,27 @@ import {
 } from 'react-icons/cg'
 import { css } from '@emotion/react'
 import Colors from '@/styles/Colors'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 const Navigation = () => {
   return (
     <>
       <div css={navbar}>
-        <Link to="/networking">
+        <NavLink to="/home">
           <CgHome css={icon} />
-        </Link>
-        <Link to="/myplaylist">
+        </NavLink>
+        <NavLink to="/myplaylist">
           <CgStack css={icon} />
-        </Link>
-        <Link to="/addplaylist">
+        </NavLink>
+        <NavLink to="/addplaylist">
           <CgMathPlus css={icon} />
-        </Link>
-        <Link to="/bookmark">
+        </NavLink>
+        <NavLink to="/bookmark">
           <CgBookmark css={icon} />
-        </Link>
-        <Link to="/profile">
+        </NavLink>
+        <NavLink to="/profile">
           <CgProfile css={icon} />
-        </Link>
+        </NavLink>
       </div>
     </>
   )
@@ -39,13 +39,15 @@ const navbar = css`
   align-items: center;
   height: 72px;
   position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 390px;
+  width: 430px;
   background-color: ${Colors.black};
   color: ${Colors.lightGrey};
   opacity: 0.8;
   z-index: 100;
+  border-radius: 10px;
+  .active {
+    color: ${Colors.white};
+  }
 `
 
 const icon = css`

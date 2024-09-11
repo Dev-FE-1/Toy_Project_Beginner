@@ -146,8 +146,8 @@ const GlobalStyles = () => (
       }
       body,
       #root {
-        width: 390px;
-        height: 844px;
+        width: 100%;
+        height: 100%;
         font-family:
           'Pretendard Variable',
           Pretendard,
@@ -166,11 +166,8 @@ const GlobalStyles = () => (
           sans-serif;
         font-size: ${fontSize.md};
         font-weight: ${fontWeight.medium};
-        background-color: ${Colors.black};
-        color: ${Colors.black};
-      }
-      #root {
         background-color: ${Colors.white};
+        color: ${Colors.black};
       }
       html {
         font-size: 16px;
